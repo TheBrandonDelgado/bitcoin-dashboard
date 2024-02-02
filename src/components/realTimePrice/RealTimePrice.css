@@ -1,0 +1,31 @@
+h2 {
+    font-size: calc(10px + 1vmin);
+    /* color: rgba(255, 255, 255, 0.2); */
+    color: white;
+    margin: 0;
+    text-align: center;
+}
+
+p {
+    color: white;
+    font-size: calc(10px + 2vmin);
+    font-weight: bold;
+    margin: 5px;
+}
+
+.info {
+    /* color: rgba(255, 255, 255, 0.2); */
+    color: gray;
+    font-size: calc(10px + .1vmin);
+}
+
+.percentage {
+    font-size: calc(10px + .25vmin);
+}
+
+.price {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-grow: 1.5;
+}

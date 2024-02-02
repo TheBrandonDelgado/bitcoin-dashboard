@@ -1,0 +1,10 @@
+.fear-greed {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.sentiment {
+    font-size: calc(10px + .25vmin);
+}
