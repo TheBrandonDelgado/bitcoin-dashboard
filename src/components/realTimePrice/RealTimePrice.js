@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import Skeleton from 'react-loading-skeleton';
 import axios from 'axios';
 import './RealTimePrice.css';
+import 'react-loading-skeleton/dist/skeleton.css';
 
 function RealTimePrice() {
     const [ price, setPrice ] = useState(null);
@@ -26,10 +28,10 @@ function RealTimePrice() {
         <div className="price">
             <h2>Bitcoin Price</h2>
             {
-                price ? <p>${price.toLocaleString()}</p> : <p>Loading...</p>
+                price ? <p>${price.toLocaleString()}</p> : <Skeleton count={1} height={25} width={100} baseColor="#333" highlightColor="#444" />
             }
             {
-                percentage ? <p className="percentage">{ percentage > 0 && "+"}{percentage}% YTD</p> : <p>Loading...</p>
+                percentage ? <p className="percentage">{ percentage > 0 && "+"}{percentage}% YTD</p> : <Skeleton count={1} height={20} width={60} baseColor="#333" highlightColor="#444" />
             }
             <p className="info">Provided by CoinGecko</p>
         </div>

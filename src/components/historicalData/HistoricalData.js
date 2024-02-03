@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Skeleton from 'react-loading-skeleton';
 import { Line } from 'react-chartjs-2';
 import {
     Chart as ChartJS,
@@ -12,6 +13,7 @@ import {
   } from 'chart.js';
 import axios from 'axios';
 import './HistoricalData.css';
+import 'react-loading-skeleton/dist/skeleton.css';
 
 ChartJS.register(
     CategoryScale,
@@ -92,7 +94,7 @@ function HistoricalData() {
 
     return (
         <div className="graph">
-            {historicalData ? <Line data={historicalData} options={options} height="300%" /> : <p>Loading...</p>}
+            {historicalData ? <Line data={historicalData} options={options} height="300%" /> : <Skeleton count={1} height={50} width={"50vw"} baseColor="#333" highlightColor="#444" /> }
         </div>
     );
 }
